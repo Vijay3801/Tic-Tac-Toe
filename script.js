@@ -3,8 +3,12 @@ let hide = document.querySelector(".hide");
 let msg = document.querySelector(".msg");
 let newGame = document.querySelector(".new-btn");
 let resetGame = document.querySelector(".reset-btn");
+let hideGame = document.querySelector(".hide-game");
+let hideBtn = document.querySelector(".hide-btn");
 
 let turnO = true;
+hideGame.classList.remove("hide-game");
+hideBtn.classList.remove("hide-btn");
 const winPattern = [
     [0,1,2],
     [0,4,8],
@@ -49,6 +53,8 @@ const checkWinner = ()=>{
 const showWinner = (winner) =>{
     disableBox();
     hide.classList.remove("hide");
+    hideGame.classList.add("hide-game");
+    hideBtn.classList.add("hide-btn");
     msg.innerText = `Congratulations, Winner is ${winner}`;
 };
 const disableBox = () =>{
@@ -66,6 +72,8 @@ const enableBox = () =>{
 };
 const reset = () =>{
     hide.classList.add("hide");
+    hideGame.classList.remove("hide-game");
+    hideBtn.classList.remove("hide-btn");
     turnO = true;
     enableBox();
 };

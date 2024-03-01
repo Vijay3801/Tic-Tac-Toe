@@ -38,6 +38,7 @@ h1{
     cursor: pointer;
 }
 .reset-btn{
+    margin-top: 1rem;
     padding: 1.5vmin;
     font-size: 3vmin;
     background-color: steelblue;
@@ -50,6 +51,12 @@ h1{
 }
 .hide{
     display:none;
+}
+.hide-game{
+    display: none;
+}
+.hide-btn{
+    display: none;
 }
 .msg{
     font-size: 5rem;
